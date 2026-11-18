@@ -1,0 +1,30 @@
+[project]
+name = "lifeops"
+version = "0.1.0"
+description = "A professional AI assistant for managing meetings, emails, documents, and tasks."
+readme = "README.md"
+authors = [
+    { name = "JaganMurugan", email = "jaganmurugan.m@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=1.5.1",
+    "langchain-ollama>=1.1.0",
+    "langchain-openai>=1.8.1",
+    "langgraph>=1.2.22",
+    "pydantic>=2.14.3",
+    "pydantic-settings>=2.16.3",
+]
+
+[project.scripts]
+lifeops = "lifeops:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.5",
+]
